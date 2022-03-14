@@ -1,10 +1,10 @@
 import './App.css';
 
-function Subject() {
+function Subject(props) {
     return (
         <header>
-            <h1>WEB</h1>
-            world wide web!
+            <h1>{props.title}</h1>
+            {props.sub}
         </header>
     );
 }
@@ -33,7 +33,7 @@ function Content() {
 function App() {
   return (
     <div className="App">
-        <Subject></Subject>
+        <Subject title="WEB" sub="world wide web"></Subject>
         <TOC></TOC>
         <Content></Content>
     </div>
