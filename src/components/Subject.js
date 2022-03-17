@@ -1,7 +1,10 @@
 function Subject(props) {
     return (
         <header>
-            <h1>{props.title}</h1>
+            <h1><a href="/" onClick={function(event){
+                event.preventDefault();
+                props.onChangeMode();
+            }}>{props.title}</a></h1>
             {props.sub}
         </header>
     );
